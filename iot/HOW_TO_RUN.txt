@@ -1,0 +1,36 @@
+===== HOW TO RUN — SafaiMitra Smart Dustbin (Windows) =====
+
+PREREQUISITES
+─────────────
+1. Python 3.10 or 3.11 installed (https://python.org)
+   During install: tick "Add Python to PATH"
+
+2. Install dependencies (run once in this folder):
+   pip install -r requirements.txt
+
+3. Make sure the keras/ folder is in the same folder as smartDustbin.py
+   (keras_model.h5 and labels.txt must be there)
+
+CONFIG (open smartDustbin.py and edit the top section)
+──────────────────────────────────────────────────────
+  ARDUINO_PORT  → e.g. "COM3", "COM4"  (check Device Manager → Ports)
+                  Set to None if no Arduino is connected.
+
+  CAMERA_INDEX  → 0 for built-in webcam, 1 for first USB cam, etc.
+                  If the window opens but shows a black screen, try 1 or 2.
+
+  BACKEND_URL   → default is http://localhost:5000/api/waste/iot
+                  The backend must be running on the same machine first.
+
+RUNNING
+───────
+  python smartDustbin.py
+
+CONTROLS (in the camera window)
+────────────────────────────────
+  SPACE  →  detect waste and send to backend
+  Q      →  quit
+
+OUTPUT
+──────
+  dashboard.csv is created in the same folder as the script.

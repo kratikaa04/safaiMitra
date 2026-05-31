@@ -1,0 +1,36 @@
+===== HOW TO RUN — SafaiMitra Backend (Windows) =====
+
+PREREQUISITES
+─────────────
+1. Node.js 18+ installed (https://nodejs.org)
+2. MongoDB Community Server installed and running (https://www.mongodb.com/try/download/community)
+   After installing MongoDB, start it:
+     → Open Services (Win+R, type services.msc) and make sure "MongoDB" is Started
+     → OR open a terminal and run: mongod
+
+FIRST-TIME SETUP (run once in this folder)
+───────────────────────────────────────────
+  npm install          ← installs all packages
+  node seed.js         ← loads sample data into MongoDB (optional but recommended)
+
+RUNNING
+───────
+  npm run dev          ← starts with auto-reload (development)
+  npm start            ← starts normally (production)
+
+The backend will be available at http://localhost:5000
+
+VERIFY IT'S WORKING
+────────────────────
+  Open in browser: http://localhost:5000/api/health
+  You should see: {"status":"SafaiMitra backend is running",...}
+
+DEMO ACCOUNTS (after running seed.js)
+───────────────────────────────────────
+  User:  john.doe@safaimitra.app  /  password123
+  Admin: admin@safaimitra.app     /  admin123
+
+PORTS USED
+──────────
+  5000 — backend API
+  27017 — MongoDB (managed by MongoDB, don't change)

@@ -1,0 +1,6 @@
+node_modules/
+.env
+__pycache__/
+dashboard.csv
+*.h5
+*.csv
